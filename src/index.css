@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,6 +26,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
 }
 ol, ul {
 	list-style: none;
@@ -40,3 +47,4 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
