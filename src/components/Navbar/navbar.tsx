@@ -13,7 +13,7 @@ export default function Navbar() {
 
    return (
       <>
-         <div className={`{sidebard ${open ? 'open' : ''}`}>
+         <div className={`sidebar ${open ? 'open' : ''}`}>
             <div className='theme-toggle' onClick={toggleDarkMode}>
                {darkMode ? <Sun className='icon-sun' size={30} /> : <Moon className='icon-moon' size={30} />}
             </div>
@@ -41,7 +41,7 @@ export default function Navbar() {
             </nav>
          </div>
 
-         <button className='hamburger' onClick={() => setOpen(!open)}>
+         <button className={`hamburger ${open ? 'open' : ''}`} onClick={() => setOpen(!open)}>
             <div className='bar'></div>
             <div className='bar'></div>
          </button>

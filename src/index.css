@@ -48,3 +48,22 @@ table {
 	border-spacing: 0;
 }
 
+:root {
+  --bg: #E5EAF1;
+  --text: #2F2F2F;
+  --primary: #1E3A5F;
+  --accent: #3ABAB4;
+  --hover: #1ea39f;
+  --sidebar-bg: #15233c;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #F1F5F9;
+  --primary: #3ABAB4;
+  --accent: #FACC15;
+  --hover: #f97316;
+  --sidebar-bg: #0d1a2f;
+}
+
+

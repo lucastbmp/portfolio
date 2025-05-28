@@ -5,6 +5,6 @@ import Navbar from './components/Navbar/navbar.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-   <Navbar />
+      <Navbar />
   </StrictMode>,
 )
