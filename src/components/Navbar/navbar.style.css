@@ -24,49 +24,32 @@
    transition: transforme 0.4s ease;
 }
 
+
 .theme-toggle .icon-moon,
 .theme-toggle .icon-sun {
-   transition: transform 0.6s ease, filter 0.6s ease;
-   filter: blur(0);
+   animation: none;
+   transition: transform 0.6s ease, filter 0.3s ease;
 }
 
-.theme-toggle .icon-moon:hover,
+.theme-toggle .icon-moon:hover {
+   transform: rotate(360deg);
+}
+
 .theme-toggle .icon-sun:hover {
-   animation: spinForward 0.6s forwards;
+   transform: rotate(360deg);
 }
 
 .theme-toggle .icon-moon:not(:hover),
 .theme-toggle .icon-sun:not(:hover) {
-   animation: spinReverse 0.6s ;
+   transform: rotate(0deg);
+   transform: transform 0.6s ease-out, filter 0.3s ease-out;
 }
 
-@keyframes spinForward {
-  0% {
-    transform: rotate(0deg);
-    filter: blur(0);
-  }
-  50% {
-    filter: blur(1px);
-  }
-  100% {
-    transform: rotate(360deg);
-    filter: blur(0);
-  }
+.nav-item,
+.nav-item .label {
+   color: white !important;
 }
 
-@keyframes spinReverse {
-  0% {
-    transform: rotate(360deg);
-    filter: blur(0);
-  }
-  50% {
-    filter: blur(1px);
-  }
-  100% {
-    transform: rotate(0deg);
-    filter: blur(0);
-  }
-}
 
 .nav-links {
    display: flex;
@@ -89,7 +72,7 @@
    left: 100%;
    top: 50%;
    transform: translateY(-50%) scaleX(0);
-   background: var(--accent);
+   background-color: #3ABAB4;
    color: var(--primary);
    padding: 5px 10px;
    margin-left: 10px;
@@ -100,6 +83,10 @@
    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.nav-item:hover .number {
+   color: #3ABAB4;
+   transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
 
 .nav-item:hover .label {
    transform: translateY(-50%) scaleX(1);
@@ -117,14 +104,13 @@
    display: none;
    width: 32px;
    height: 32px;
-   justify-content: center;
 
 }
 
 .hamburger .bar {
    width: 20px;
    height: 3px;
-   background: var(--text);
+   background: white;
    margin: 4px 0;
    border-radius: 2px;
    transition: background-color 0.3s;
@@ -144,12 +130,49 @@
       right: 0;
    }
 
+   .theme-toggle {
+      padding-top: 70px;
+   }
+
+   .nav-item {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+   }
+
+   .nav-item .label {
+      position: static;
+      transform: none;
+      opacity: 1;
+      background: none;
+      color: white;
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+      transition: none;
+   }
+
+ 
+   .nav-item:hover .label {
+      transform: none;
+      opacity: 1;
+
+   }
+
+
    .hamburger {
       display: block;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .hamburger .bar {
+      transition: transform 0.3s ease, background-color 0.3s ease;
    }
 
    .hamburger.open .bar:nth-child(1) {
-     transform: rotate(45deg) translate(4px, 4px);
+     transform: rotate(45deg) translate(2px, 1px);
    }
 
    .hamburger.open .bar:nth-child(2) {

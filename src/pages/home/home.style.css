@@ -1,0 +1,14 @@
+.section-home {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: 300px;
+}
+
+
+.home {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: 300px;
+}
