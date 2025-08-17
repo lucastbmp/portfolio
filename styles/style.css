@@ -66,3 +66,9 @@ a {
 strong {
     color: var(--clr-indigo);
 }
+
+nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}

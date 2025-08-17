@@ -22,7 +22,6 @@
 
 } */
 
-
 .btn {
     display: inline-block;
     font-weight: 600;
@@ -47,6 +46,7 @@
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    overflow: visible;
 }
 
 .section {

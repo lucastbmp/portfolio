@@ -11,7 +11,7 @@
 
 <body>
   <header class="header container">
-    <nav>
+    <nav class="nav">
       <ul class="header__menu">
         <li>
           <a class="header__link" href="#about">Sobre</a>
@@ -33,7 +33,7 @@
           </button>
         </li>
         <li>
-          <a class="header__resume btn" href="">Início</a>
+          <a class="header__resume btn" href="#">Início</a>
         </li>
       </ul>
       <button class="header__bars">
@@ -56,12 +56,12 @@
       <a class="hero__btn btn" href="#">Entre em contato</a>
     </section>
 
-    <section class="about container section">
+    <section class="about container section" id="about">
       <div class="about__content">
         <h2 class="about__title">Sobre</h2>
         <p class="about__description">Olá! Eu me chamo Lucas, tenho 20 anos. Sou um <strong>Desenvolvedor Web</strong>
           de Santos - SP</p>
-        <p class="about__description"><a>Ex-militar</a>. Trabalhei por dois anos como <a>soldado especialista em
+        <p class="about__description"><a>Ex-militar</a>. Trabalhei por <strong>dois anos</strong> como <a>soldado especialista em
           Tecnologia da Informação</a>.
           Atualmente trabalho como auxiliar de TI.
           Sou muito determinado e amo aprender coisas novas.
@@ -83,12 +83,80 @@
         <img class="about__img" src="/about.jpeg" class="about__img" alt="">
       </div>
     </section>
-    <section></section>
+      <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Meu projetos</h3>
+        <div class="featured__wrapper">
+          <h2 class="featured__title">Nyro</h2>
+          <a
+            aria-label="link featured projects"
+            class="featured__link"
+            href="#"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+              />
+            </svg>
+          </a>
+        </div>
+      <p class="featured__description">Nyro é um sistema
+        para monitoramento de bitcoin, que permite ao usuário
+        cadastrar sua carteira, depositar, sacar, comprar e 
+        vender BTC.
+      </p>
+      <div>
+        <h3 class="featured__label">Stack</h3>
+        <ul class="featured__tech-stack">
+          <li class="featured__info">HTML</li>
+          <li class="featured__info">CSS</li>
+          <li class="featured__info">NodeJS</li>
+          <li class="featured__info">Express</li>
+          <li class="featured__info">SQLite</li>
+          <li class="featured__info">Path</li>
+          <li class="featured__info">FS</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="featured__label">Tipo do Projeto</h3>
+        <p class="featured__info">Fullstack</p>
+      </div>
+      <div>
+        <h3 class="featured__label">Timeline</h3>
+        <p class="featured__info">Julho 2025 - Atualmente</p>
+      </div>
+    </section>
     <section></section>
     <section></section>
   </main>
   <footer></footer>
   <script type="module" src="/src/main.js"></script>
+  <script>
+  const header = document.querySelector('header');
+  const nav = document.querySelector('nav');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        nav.classList.add('nav--collapsed');
+      } else {
+        nav.classList.remove('nav--collapsed');
+      }
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  observer.observe(header);
+</script>
 </body>
 
 </html>

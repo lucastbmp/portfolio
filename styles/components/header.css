@@ -6,6 +6,12 @@
     padding-bottom: 2rem;
 }
 
+.nav {
+    margin-top: 5vh;
+    position: fixed;
+    top: 0;
+}
+
 .header__menu {
     display: none;
 }
@@ -14,7 +20,15 @@
     color: var(--clr-light);
     width: var(--size-2xl);
     height: var(--size-2xl);
-    display: block;
+}
+
+
+.nav--collapsed .header__menu {
+  display: none !important;
+}
+
+.nav--collapsed .header__bars {
+  display: block !important;
 }
 
 /* @media (min-width: 475px) {
