@@ -33,3 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+darkMode();
+
+import darkMode from './dark-mode';
