@@ -17,7 +17,7 @@
 
 .about__description {
     max-width: 60ch;
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
     color: var(--clr-slate600);
 }
 
@@ -44,7 +44,7 @@
 }
 
 .about__list {
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
     color: var(--clr-slate600);
     position: relative;
     padding-left: 30px;
