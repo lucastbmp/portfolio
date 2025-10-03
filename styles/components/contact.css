@@ -1,3 +1,24 @@
+.contact__social {
+    font-size: var(--size-sm);
+    color: var(--clr-light);
+    margin-top: 1em;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.contact__social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5em;
+}
+
+.contact__social-link {
+    color: var(--clr-rose);
+}
+
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -43,6 +64,25 @@
 }
 
 @media (min-width: 1024px) {
+    .contact__social {
+        font-size: var(--size-lg);
+    }
+
+    .contact__social-link {
+        color: #333;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .contact__social-link svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .contact__social-link:hover {
+        color: var(--clr-rose);
+        transform: translateY(-3px);
+    }
+
     .contact__title {
         font-size: var(--size-4xl);
     }

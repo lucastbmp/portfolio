@@ -1,3 +1,17 @@
+.featured__wrapper {
+    position: relative;
+}
+
+.featured__link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 10rem;
+}
+
 .hero {
     text-align: center;
     display: flex;
@@ -99,6 +113,7 @@
     .hero {
         gap: 2rem;
     }
+
     .hero__img {
         width: 11rem;
         height: 11rem;
